@@ -16,7 +16,7 @@ class _WorksViewState extends State<WorksView> {
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height - AppBar().preferredSize.height;
     return SizedBox(
-      height: height > 500 ? height : 500,
+      height: height > 700 ? height : 700,
       width: width,
       child: const Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,

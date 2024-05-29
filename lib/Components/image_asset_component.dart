@@ -20,7 +20,8 @@ class ImageAssetComponent extends StatelessWidget {
     return Image.asset(
       pathImage, 
       width: width,
-      fit: BoxFit.fitWidth,
+      height: width,
+      fit: BoxFit.contain,
     );
   }
 }
