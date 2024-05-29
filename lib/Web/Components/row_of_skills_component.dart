@@ -6,22 +6,17 @@ class RowOfSkillsComponent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
+    return const Wrap(
+      spacing: 7,
+      runSpacing: 7,
       children: [
         BorderTextContainerComponent(text: 'Flutter'),
-        SizedBox(width: 7,),
         BorderTextContainerComponent(text: 'Firebase'),
-        SizedBox(width: 7,),
         BorderTextContainerComponent(text: 'MariaDB'),
-        SizedBox(width: 7,),
         BorderTextContainerComponent(text: 'MySQL'),
-        SizedBox(width: 7,),
         BorderTextContainerComponent(text: 'Android'),
-        SizedBox(width: 7,),
         BorderTextContainerComponent(text: 'Web'),
-        SizedBox(width: 7,),
         BorderTextContainerComponent(text: 'Ios'),
-        SizedBox(width: 7,),
         BorderTextContainerComponent(text: 'Windows'),
       ],
     );

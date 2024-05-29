@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:landing_page/Components/message_text_container_component.dart';
 import 'package:landing_page/Components/sans_bold_component.dart';
 import 'package:landing_page/Web/Components/circle_avatar_component.dart';
+import 'package:landing_page/Web/Components/contact_details_component.dart';
 import 'package:landing_page/Web/Views/contact_view.dart';
 
 class HomeView extends StatelessWidget {
@@ -14,37 +16,26 @@ class HomeView extends StatelessWidget {
 
     return SizedBox(
       width: width,
-      height: height,
-      child: Row(
+      height: height > 400 ? height : 500,
+      child: const Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Container(
-                decoration: const BoxDecoration(
-                  color: Colors.deepPurple,
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(20),
-                    topRight: Radius.circular(20),
-                    bottomRight: Radius.circular(20),
-                  )
-                ),
-                child: const Padding(
-                  padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-                  child: SansBoldComponent(text: 'Welcome, my name is...',  color: Colors.white),
-                )
+              MessageTextContainerComponent(
+                text: 'Welcome, my name is...',
               ),
-              const SizedBox(height: 10,),
-              const SansBoldComponent(text: 'Ulises Shie Sotelo \nChopin', size: 55,),
-              const SizedBox(height: 10,),
-              const SansBoldComponent(text: 'Flutter Developer', size: 30,),
-              const SizedBox(height: 20,),
-              const ContactView(),
+              SizedBox(height: 10,),
+              SansBoldComponent(text: 'Ulises Shie Sotelo \nChopin', size: 55,),
+              SizedBox(height: 10,),
+              SansBoldComponent(text: 'Flutter Developer', size: 30,),
+              SizedBox(height: 20,),
+              ContactDetailsComponent(),
             ],
           ),
-          const CircleAvatarComponent(),
+          CircleAvatarComponent(),
         ],
       ),
     );
