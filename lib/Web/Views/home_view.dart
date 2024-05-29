@@ -3,7 +3,6 @@ import 'package:landing_page/Components/message_text_container_component.dart';
 import 'package:landing_page/Components/sans_bold_component.dart';
 import 'package:landing_page/Web/Components/circle_avatar_component.dart';
 import 'package:landing_page/Web/Components/contact_details_component.dart';
-import 'package:landing_page/Web/Views/contact_view.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});

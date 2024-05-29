@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:landing_page/Web/Components/list_of_tabbar_texts_component.dart';
 import 'package:landing_page/Web/Views/about_me_view.dart';
+import 'package:landing_page/Web/Views/contact_view.dart';
 import 'package:landing_page/Web/Views/home_view.dart';
 import 'package:landing_page/Web/Views/works_view.dart';
 // import 'package:landing_page/Web/Components/tabbar_text_component.dart';
@@ -38,18 +39,13 @@ class _LandingPageWebViewState extends State<LandingPageWebView> {
           controller: _scrollController,
           thumbVisibility: true,
           trackVisibility: true,
-          child: CustomScrollView(
+          child: ListView(
             controller: _scrollController,
-            slivers: const <Widget>[
-              SliverToBoxAdapter(
-                child: HomeView(),
-              ),
-              SliverToBoxAdapter(
-                child: AboutMeView(),
-              ),
-              SliverToBoxAdapter(
-                child: WorksView(),
-              ),
+            children: const <Widget>[
+              HomeView(),
+              AboutMeView(),
+              WorksView(),
+              ContactView(),
             ],
           ),
         )

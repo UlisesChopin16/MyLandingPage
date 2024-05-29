@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:landing_page/Components/elevation_card_component.dart';
-import 'package:landing_page/Components/image_asset_component.dart';
 import 'package:landing_page/Components/sans_bold_component.dart';
 import 'package:landing_page/Web/Components/row_of_works_component.dart';
 

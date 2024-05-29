@@ -40,13 +40,13 @@ class _TabbarTextComponentState extends State<TabbarTextComponent> {
           duration: const Duration(milliseconds: 150),
           curve: Curves.easeInOut,
           style: isSelected 
-            ? GoogleFonts.oswald(
+            ? GoogleFonts.roboto(
               fontSize: widget.fontSize ?? 24,
               color: Colors.transparent,
               shadows: <Shadow>[
                 const Shadow(
                   color: Colors.deepPurple,
-                  offset: Offset(0, -5),
+                  offset: Offset(0, -2),
                   // blurRadius: 10,
                 ),
               ],
@@ -54,12 +54,13 @@ class _TabbarTextComponentState extends State<TabbarTextComponent> {
               decorationThickness: 2,
               decorationColor: Colors.deepPurple,
             ) 
-            : GoogleFonts.oswald(
+            : GoogleFonts.roboto(
               color: Colors.black,
+              fontWeight: FontWeight.w600,
               fontSize: widget.fontSize == null ? 20 : (widget.fontSize! - 4),
             ),
           child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 10.0),
+            padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
             child: Text(
               widget.text,
             ),
