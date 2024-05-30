@@ -12,17 +12,21 @@ class SansComponent extends StatelessWidget {
   /// The text to be displayed
   final String text;
 
+  final TextAlign textAlign;
+
   const SansComponent({
     super.key,
     required this.text,
     this.size = 16,
     this.color = Colors.black,
+    this.textAlign = TextAlign.left,
   });
 
   @override
   Widget build(BuildContext context) {
     return Text(
       text,
+      textAlign: textAlign,
       style: GoogleFonts.openSans(
         color: color,
         fontSize: size,

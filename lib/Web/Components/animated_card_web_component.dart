@@ -9,15 +9,19 @@ class AnimatedCardWebComponent extends StatefulWidget {
   final bool reverse;
   final Widget? child;
   const AnimatedCardWebComponent({
-    super.key, required this.imagePath, required this.text, this.reverse = false, this.child,
+    super.key,
+    required this.imagePath,
+    required this.text,
+    this.reverse = false,
+    this.child,
   });
 
   @override
   State<AnimatedCardWebComponent> createState() => _AnimatedCardWebComponentState();
 }
 
-class _AnimatedCardWebComponentState extends State<AnimatedCardWebComponent> with SingleTickerProviderStateMixin{
-
+class _AnimatedCardWebComponentState extends State<AnimatedCardWebComponent>
+    with SingleTickerProviderStateMixin {
   late AnimationController controller = AnimationController(
     duration: const Duration(seconds: 1),
     vsync: this,
@@ -45,12 +49,20 @@ class _AnimatedCardWebComponentState extends State<AnimatedCardWebComponent> wit
     return SlideTransition(
       position: animation,
       child: ElevationCardComponent(
-        child:  Column(
+        child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            widget.child ?? ImageAssetComponent(pathImage: widget.imagePath, width: 250,),
-            const SizedBox(height: 10,),
-            SansBoldComponent(text: widget.text,),
+            widget.child ??
+                ImageAssetComponent(
+                  pathImage: widget.imagePath,
+                  width: 250,
+                ),
+            const SizedBox(
+              height: 10,
+            ),
+            SansBoldComponent(
+              text: widget.text,
+            ),
           ],
         ),
       ),
