@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:landing_page/Components/circle_avatar_component.dart';
+import 'package:landing_page/Components/sans_bold_component.dart';
 import 'package:landing_page/Web/Components/list_of_tabbar_texts_component.dart';
 import 'package:landing_page/Web/Views/about_me_view.dart';
 import 'package:landing_page/Web/Views/contact_view.dart';
@@ -33,7 +35,17 @@ class _LandingPageWebViewState extends State<LandingPageWebView> {
         //   SizedBox(width: 50,),
         // ],
       ),
-      drawer: const Drawer(),
+      drawer: const Drawer(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            CircleAvatarComponent(radius: 100),
+            SizedBox(height: 20,),
+            SansBoldComponent(text: 'Ulises Shie Sotelo Chopin', size: 30, textAlign: TextAlign.center,),
+          ],
+        ),
+      ),
       body: Center(
         child: Scrollbar(
           controller: _scrollController,
