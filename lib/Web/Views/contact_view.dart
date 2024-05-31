@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:landing_page/Components/sans_bold_component.dart';
+import 'package:landing_page/Components/sans_font_component.dart';
 import 'package:landing_page/Components/text_form_component.dart';
 
 class ContactView extends StatefulWidget {
@@ -57,7 +57,7 @@ class _ContactViewState extends State<ContactView> {
             const Center(
               child: Padding(
                 padding: EdgeInsets.only(bottom: 20.0),
-                child: SansBoldComponent(
+                child: SansBold(
                   text: 'Contact me',
                   size: 40,
                 ),
@@ -129,7 +129,7 @@ class _ContactViewState extends State<ContactView> {
               height: 50,
               minWidth: 200,
               color: Colors.deepPurpleAccent,
-              child: const SansBoldComponent(
+              child: const SansBold(
                 text: 'Submit',
                 size: 20,
                 color: Colors.white,

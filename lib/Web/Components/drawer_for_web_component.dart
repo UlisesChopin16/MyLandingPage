@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:landing_page/Components/circle_avatar_component.dart';
-import 'package:landing_page/Components/sans_bold_component.dart';
+import 'package:landing_page/Components/sans_font_component.dart';
 import 'package:landing_page/Components/svg_icon_text_component.dart';
 import 'package:landing_page/Constants/pallete.dart';
 import 'package:landing_page/Constants/string_constants.dart';
@@ -14,7 +14,6 @@ class DrawerForWebComponent extends StatefulWidget {
 }
 
 class _DrawerForWebComponentState extends State<DrawerForWebComponent> {
-
   Iterable keys = StringConstants.socialMedia.keys;
   Iterable values = StringConstants.socialMedia.values;
 
@@ -36,7 +35,7 @@ class _DrawerForWebComponentState extends State<DrawerForWebComponent> {
           const SizedBox(
             height: 20,
           ),
-          const SansBoldComponent(
+          const SansBold(
             text: 'Ulises Shie Sotelo Chopin',
             size: 30,
             textAlign: TextAlign.center,
@@ -53,8 +52,7 @@ class _DrawerForWebComponentState extends State<DrawerForWebComponent> {
                 animate: true,
                 color: colors[index],
                 size: 40,
-                imagePath:
-                    'assets/images/icons/${keys.elementAt(index).toLowerCase()}.svg',
+                imagePath: 'assets/images/icons/${keys.elementAt(index).toLowerCase()}.svg',
                 onTap: () => onTap(values.elementAt(index)),
               ),
             ),

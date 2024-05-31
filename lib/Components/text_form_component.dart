@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:landing_page/Components/sans_component.dart';
+import 'package:landing_page/Components/sans_font_component.dart';
 
 class TextFormComponent extends StatelessWidget {
-
   final double width;
 
   final int maxLines;
@@ -14,7 +13,6 @@ class TextFormComponent extends StatelessWidget {
   final String? Function(String?)? validator;
 
   final TextEditingController? controller;
-
 
   const TextFormComponent({
     super.key,
@@ -28,11 +26,15 @@ class TextFormComponent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Column(
+    return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        SansComponent(text: labelText,),
-        const SizedBox(height: 5,),
+        Sans(
+          text: labelText,
+        ),
+        const SizedBox(
+          height: 5,
+        ),
         SizedBox(
           width: width,
           child: TextFormField(

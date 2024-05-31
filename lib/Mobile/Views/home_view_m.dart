@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:landing_page/Components/circle_avatar_component.dart';
+import 'package:landing_page/Components/contact_details_component.dart';
+import 'package:landing_page/Components/icon_and_text_component.dart';
 import 'package:landing_page/Components/message_text_container_component.dart';
-import 'package:landing_page/Components/sans_bold_component.dart';
-import 'package:landing_page/Web/Components/contact_details_component.dart';
+import 'package:landing_page/Components/sans_font_component.dart';
 
 class HomeViewM extends StatefulWidget {
   const HomeViewM({super.key});
@@ -20,35 +21,39 @@ class _HomeViewMState extends State<HomeViewM> {
     return SizedBox(
       width: width,
       height: height > 600 ? height : 600,
-      child: const Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          CircleAvatarComponent(
-            radius: 137,
-          ),
-          MessageTextContainerComponent(
-            text: 'Welcome, my name is...',
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          SansBoldComponent(
-            text: 'Ulises Shie Sotelo \nChopin',
-            size: 35,
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          SansBoldComponent(
-            text: 'Flutter Developer',
-            size: 30,
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          ContactDetailsComponent(),
-        ],
+      child: const Padding(
+        padding: EdgeInsets.only(left: 20.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [  
+            CircleAvatarComponent(
+              radius: 137,
+            ),
+            SizedBox(
+              height: 40, 
+            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                MessageTextContainerComponent(
+                  text: 'Welcome, my name is...',
+                ),
+                SansBold(
+                  text: 'Ulises Shie Sotelo\nChopin',
+                  size: 40,
+                ),
+                Sans(
+                  text: 'Flutter Developer',
+                  size: 20,
+                ),
+                SizedBox(
+                  height: 15,
+                ),
+                ContactDetailsComponent()
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }

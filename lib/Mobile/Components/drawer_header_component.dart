@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:landing_page/Components/circle_avatar_component.dart';
-import 'package:landing_page/Components/sans_bold_component.dart';
+import 'package:landing_page/Components/sans_font_component.dart';
 
 class DrawerHeaderComponent extends StatelessWidget {
   const DrawerHeaderComponent({super.key});
@@ -18,7 +18,7 @@ class DrawerHeaderComponent extends StatelessWidget {
           CircleAvatarComponent(
             radius: 50,
           ),
-          SansBoldComponent(
+          SansBold(
             text: 'Ulises Shie Sotelo Chopin',
           ),
         ],

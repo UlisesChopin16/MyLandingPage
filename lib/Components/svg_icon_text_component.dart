@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:landing_page/Components/sans_component.dart';
+import 'package:landing_page/Components/sans_font_component.dart';
 import 'package:landing_page/Components/svg_icon_component.dart';
 
 class SvgIconTextComponent extends StatefulWidget {
@@ -123,7 +123,7 @@ class _SvgIconTextComponentState extends State<SvgIconTextComponent> with Ticker
                   color: color,
                 ),
                 Flexible(
-                  child: SansComponent(
+                  child: Sans(
                     text: widget.text,
                     textAlign: widget.textAlign,
                     size: widget.sizeText,

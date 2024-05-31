@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:landing_page/Components/elevation_card_component.dart';
 import 'package:landing_page/Components/image_asset_component.dart';
-import 'package:landing_page/Components/sans_bold_component.dart';
+import 'package:landing_page/Components/sans_font_component.dart';
 
 class AnimatedCardWebComponent extends StatefulWidget {
   final String imagePath;
@@ -60,7 +60,7 @@ class _AnimatedCardWebComponentState extends State<AnimatedCardWebComponent>
             const SizedBox(
               height: 10,
             ),
-            SansBoldComponent(
+            SansBold(
               text: widget.text,
             ),
           ],

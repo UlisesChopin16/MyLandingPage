@@ -39,11 +39,14 @@ class TabsMobileComponent extends StatelessWidget {
         height: 50,
         minWidth: 200,
         color: Colors.black,
-        child: IconAndTextComponent(
-          text: text,
-          iconData: iconData,
-          sizeBetween: sizeBetween,
-          color: Colors.white,
+        child: Align(
+          alignment: Alignment.centerLeft,
+          child: IconAndTextComponent(
+            text: text,
+            iconData: iconData,
+            sizeBetween: sizeBetween,
+            color: Colors.white,
+          ),
         ),
       ),
     );

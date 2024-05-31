@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:landing_page/Components/sans_component.dart';
+import 'package:landing_page/Components/sans_font_component.dart';
 
 class IconAndTextComponent extends StatelessWidget {
   final Color color;
@@ -23,6 +23,7 @@ class IconAndTextComponent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisSize: MainAxisSize.min,
       children: [
         Icon(
           iconData,
@@ -31,7 +32,7 @@ class IconAndTextComponent extends StatelessWidget {
         SizedBox(
           width: sizeBetween,
         ),
-        SansComponent(
+        Sans(
           text: text,
           color: color,
         ),
