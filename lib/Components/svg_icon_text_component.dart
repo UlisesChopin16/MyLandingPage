@@ -18,6 +18,10 @@ class SvgIconTextComponent extends StatefulWidget {
   /// The size of the container.
   final double size;
 
+  /// The size of the text.
+  /// by default is 12.
+  final double sizeText;
+
   /// The text to be displayed.
   final String text;
   final String imagePath;
@@ -38,6 +42,7 @@ class SvgIconTextComponent extends StatefulWidget {
     this.textAlign = TextAlign.center,
     this.animate = false,
     this.color = Colors.black,
+    this.sizeText = 12,
   });
 
   @override
@@ -83,6 +88,7 @@ class _SvgIconTextComponentState extends State<SvgIconTextComponent> with Ticker
   @override
   Widget build(BuildContext context) {
     return InkWell(
+      hoverColor: Colors.white,
       onTap: widget.onTap,
       child: MouseRegion(
         onEnter: (event) {
@@ -104,12 +110,12 @@ class _SvgIconTextComponentState extends State<SvgIconTextComponent> with Ticker
         child: AnimatedContainer(
           duration: duration,
           curve: Curves.easeInOut,
-          height: height,
-          width: width + 20,
+          height: widget.animate ? height : 50 + widget.size,
+          // width: width + 20,
           child: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              crossAxisAlignment: CrossAxisAlignment.stretch,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 SvgIconComponent(
                   imagePath: widget.imagePath,
@@ -120,7 +126,7 @@ class _SvgIconTextComponentState extends State<SvgIconTextComponent> with Ticker
                   child: SansComponent(
                     text: widget.text,
                     textAlign: widget.textAlign,
-                    size: 12,
+                    size: widget.sizeText,
                     color: Colors.black,
                   ),
                 ),

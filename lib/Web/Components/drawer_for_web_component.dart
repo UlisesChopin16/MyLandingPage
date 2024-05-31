@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:landing_page/Components/circle_avatar_component.dart';
 import 'package:landing_page/Components/sans_bold_component.dart';
 import 'package:landing_page/Components/svg_icon_text_component.dart';
+import 'package:landing_page/Constants/pallete.dart';
+import 'package:landing_page/Constants/string_constants.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 class DrawerForWebComponent extends StatefulWidget {
@@ -12,17 +14,11 @@ class DrawerForWebComponent extends StatefulWidget {
 }
 
 class _DrawerForWebComponentState extends State<DrawerForWebComponent> {
-  List<Color> colors = [
-    Colors.black,
-    const Color(0xFF0762f7),
-    Colors.pink,
-  ];
 
-  Map<String, String> socialMedia = {
-    'Github': 'https://github.com/UlisesChopin16',
-    'Facebook': 'https://www.facebook.com/ulises.sotelo.chopin3567',
-    'Instagram': 'https://www.instagram.com/sotelochopin'
-  };
+  Iterable keys = StringConstants.socialMedia.keys;
+  Iterable values = StringConstants.socialMedia.values;
+
+  List<Color> colors = Pallete.socialMediaColors;
 
   onTap(String value) async {
     await launchUrlString(value);
@@ -51,15 +47,15 @@ class _DrawerForWebComponentState extends State<DrawerForWebComponent> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: List.generate(
-              socialMedia.length,
+              keys.length,
               (index) => SvgIconTextComponent(
-                text: socialMedia.keys.elementAt(index),
+                text: keys.elementAt(index),
                 animate: true,
                 color: colors[index],
                 size: 40,
                 imagePath:
-                    'assets/images/icons/${socialMedia.keys.elementAt(index).toLowerCase()}.svg',
-                onTap: () => onTap(socialMedia.values.elementAt(index)),
+                    'assets/images/icons/${keys.elementAt(index).toLowerCase()}.svg',
+                onTap: () => onTap(values.elementAt(index)),
               ),
             ),
           )

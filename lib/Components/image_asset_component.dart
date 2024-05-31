@@ -22,6 +22,7 @@ class ImageAssetComponent extends StatelessWidget {
       width: width,
       height: width,
       fit: BoxFit.contain,
+      filterQuality: FilterQuality.high,
     );
   }
 }

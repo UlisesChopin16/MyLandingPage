@@ -13,21 +13,29 @@ class SvgIconComponent extends StatelessWidget {
   /// for default is 100.
   final double size;
 
+  /// The function to be executed when the image is clicked.
+  final void Function()? onTap;
+
   const SvgIconComponent({
     super.key,
     required this.imagePath,
     this.color = Colors.black,
     this.size = 100,
+    this.onTap,
   });
 
   @override
   Widget build(BuildContext context) {
-    return SvgPicture.asset(
-      width: size,
-      height: size,
-      imagePath,
-      colorFilter: ColorFilter.mode(color, BlendMode.srcIn),
-      fit: BoxFit.contain,
+    return InkWell(
+      hoverColor: Colors.white,
+      onTap: onTap,
+      child: SvgPicture.asset(
+        width: size,
+        height: size,
+        imagePath,
+        colorFilter: ColorFilter.mode(color, BlendMode.srcIn),
+        fit: BoxFit.contain,
+      ),
     );
   }
 }

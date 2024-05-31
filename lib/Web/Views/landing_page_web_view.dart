@@ -22,18 +22,7 @@ class _LandingPageWebViewState extends State<LandingPageWebView> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        elevation: 0,
-        title: const ListOfTabbarTextsComponent(),
-        // actions: const [
-        //   SizedBox(width: 50,),
-        //   TabbarTextComponent(text: 'Login'),
-        //   SizedBox(width: 20,),
-        //   TabbarTextComponent(text: 'Sign Up'),
-        //   SizedBox(width: 50,),
-        // ],
-      ),
+      appBar: const ListOfTabbarTextsComponent(),
       drawer: const DrawerForWebComponent(),
       body: Center(
         child: Scrollbar(
