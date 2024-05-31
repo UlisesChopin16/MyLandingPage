@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:landing_page/Components/sans_component.dart';
 
 class IconAndTextComponent extends StatelessWidget {

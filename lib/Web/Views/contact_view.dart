@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:landing_page/Components/sans_bold_component.dart';
 import 'package:landing_page/Components/text_form_component.dart';
 
@@ -10,7 +11,6 @@ class ContactView extends StatefulWidget {
 }
 
 class _ContactViewState extends State<ContactView> {
-
   bool isValidEmail(String? email) {
     // if email is null, return false
     if (email == null) {
@@ -24,33 +24,32 @@ class _ContactViewState extends State<ContactView> {
     return emailRegex.hasMatch(email);
   }
 
-  String? validator(String? value){
-    if(value == null || value.trim().isEmpty){
+  String? validator(String? value) {
+    if (value == null || value.trim().isEmpty) {
       return 'This field is required';
     }
     return null;
   }
 
-  String? validatorEmail(String? value){
+  String? validatorEmail(String? value) {
     String? data = validator(value);
-    if(data != null){
+    if (data != null) {
       return data;
-    }else if(!isValidEmail(value)){
+    } else if (!isValidEmail(value)) {
       return 'Please enter a valid email';
     }
     return null;
   }
-  
+
   @override
   Widget build(BuildContext context) {
-
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height - AppBar().preferredSize.height;
 
     return SizedBox(
       width: width,
       height: height > 700 ? height : 700,
-      child:  Center(
+      child: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -58,7 +57,10 @@ class _ContactViewState extends State<ContactView> {
             const Center(
               child: Padding(
                 padding: EdgeInsets.only(bottom: 20.0),
-                child: SansBoldComponent(text: 'Contact me', size: 40,),
+                child: SansBoldComponent(
+                  text: 'Contact me',
+                  size: 40,
+                ),
               ),
             ),
             Row(
@@ -72,7 +74,9 @@ class _ContactViewState extends State<ContactView> {
                       width: 350,
                       validator: validator,
                     ),
-                    const SizedBox(height: 15,),
+                    const SizedBox(
+                      height: 15,
+                    ),
                     TextFormComponent(
                       labelText: 'Email',
                       hintText: 'Please enter your email adress',
@@ -89,7 +93,9 @@ class _ContactViewState extends State<ContactView> {
                       width: 350,
                       validator: validator,
                     ),
-                    const SizedBox(height: 15,),
+                    const SizedBox(
+                      height: 15,
+                    ),
                     TextFormComponent(
                       labelText: 'Phone Number',
                       hintText: 'Please enter your phone number',
@@ -100,16 +106,22 @@ class _ContactViewState extends State<ContactView> {
                 ),
               ],
             ),
-            const SizedBox(height: 10,),
+            const SizedBox(
+              height: 10,
+            ),
             TextFormComponent(
               labelText: 'Message',
               hintText: 'Please enter your message',
               width: width / 1.5,
               maxLines: 10,
             ),
-            const SizedBox(height: 10,),
+            const SizedBox(
+              height: 10,
+            ),
             MaterialButton(
-              onPressed: () {},
+              onPressed: () {
+                context.go('/home', extra: {'message': 'Message sent'});
+              },
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10),
               ),
@@ -117,7 +129,11 @@ class _ContactViewState extends State<ContactView> {
               height: 50,
               minWidth: 200,
               color: Colors.deepPurpleAccent,
-              child: const SansBoldComponent(text: 'Submit', size: 20, color: Colors.white,),
+              child: const SansBoldComponent(
+                text: 'Submit',
+                size: 20,
+                color: Colors.white,
+              ),
             )
           ],
         ),
