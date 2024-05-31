@@ -84,6 +84,8 @@ class _DrawerForMobileComponentState extends State<DrawerForMobileComponent> {
               ),
             ),
           ),
+          heightSpace,
+          heightSpace,
         ],
       ),
     );

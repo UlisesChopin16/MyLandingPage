@@ -9,10 +9,13 @@ class ImageAssetComponent extends StatelessWidget {
   /// for default the width is 200
   final double width;
 
+  final double height;
+
   const ImageAssetComponent({
     super.key,
     required this.pathImage,
     this.width = 200,
+    this.height = 200,
   });
 
   @override
@@ -20,7 +23,7 @@ class ImageAssetComponent extends StatelessWidget {
     return Image.asset(
       pathImage, 
       width: width,
-      height: width,
+      height: height,
       fit: BoxFit.contain,
       filterQuality: FilterQuality.high,
     );

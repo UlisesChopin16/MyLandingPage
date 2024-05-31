@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:landing_page/Components/circle_avatar_component.dart';
 import 'package:landing_page/Components/contact_details_component.dart';
-import 'package:landing_page/Components/icon_and_text_component.dart';
 import 'package:landing_page/Components/message_text_container_component.dart';
 import 'package:landing_page/Components/sans_font_component.dart';
 
@@ -20,17 +19,22 @@ class _HomeViewMState extends State<HomeViewM> {
 
     return SizedBox(
       width: width,
-      height: height > 600 ? height : 600,
+      height: height > 650 ? height : 650,
       child: const Padding(
         padding: EdgeInsets.only(left: 20.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
-          children: [  
-            CircleAvatarComponent(
-              radius: 137,
-            ),
-            SizedBox(
-              height: 40, 
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Column(
+              children: [
+                CircleAvatarComponent(
+                  radius: 137,
+                ),
+                SizedBox(
+                  height: 40,
+                ),
+              ],
             ),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,

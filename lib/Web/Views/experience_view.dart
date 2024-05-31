@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:landing_page/Components/sans_font_component.dart';
 import 'package:landing_page/Web/Components/row_of_works_component.dart';
 
-class WorksView extends StatefulWidget {
-  const WorksView({super.key});
+class ExperienceView extends StatefulWidget {
+  const ExperienceView({super.key});
 
   @override
-  State<WorksView> createState() => _WorksViewState();
+  State<ExperienceView> createState() => _ExperienceViewState();
 }
 
-class _WorksViewState extends State<WorksView> {
+class _ExperienceViewState extends State<ExperienceView> {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;

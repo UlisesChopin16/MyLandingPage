@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:landing_page/Web/Components/tabbar_text_component.dart';
 
-class ListOfTabbarTextsComponent extends StatelessWidget implements PreferredSizeWidget {
-  const ListOfTabbarTextsComponent({super.key});
+class TabBarComponent extends StatelessWidget implements PreferredSizeWidget {
+  const TabBarComponent({super.key});
 
   @override
   Widget build(BuildContext context) {

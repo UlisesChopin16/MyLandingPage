@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:landing_page/Mobile/Components/drawer_for_mobile_component.dart';
+import 'package:landing_page/Mobile/Views/about_me_view_m.dart';
+import 'package:landing_page/Mobile/Views/experience_view_m.dart';
 import 'package:landing_page/Mobile/Views/home_view_m.dart';
 
 class LandingPageMobileView extends StatefulWidget {
@@ -23,17 +25,21 @@ class _LandingPageMobileViewState extends State<LandingPageMobileView> {
       ),
       drawer: const DrawerForMobileComponent(),
       body: Center(
-          child: Scrollbar(
-        controller: _scrollController,
-        thumbVisibility: true,
-        trackVisibility: true,
-        child: ListView(
+        child: Scrollbar(
           controller: _scrollController,
-          children: const <Widget>[
-            HomeViewM(),
-          ],
+          thumbVisibility: true,
+          trackVisibility: true,
+          child: ListView(
+            controller: _scrollController,
+            children: const <Widget>[
+              HomeViewM(),
+              AboutMeViewM(),
+              ExperienceViewM(),
+              SizedBox(height: 100)
+            ],
+          ),
         ),
-      )),
+      ),
     );
   }
 }

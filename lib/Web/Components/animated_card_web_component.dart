@@ -8,12 +8,20 @@ class AnimatedCardWebComponent extends StatefulWidget {
   final String text;
   final bool reverse;
   final Widget? child;
+
+  /// The width of the card
+  /// Default value is 250
+  final double width;
+  final double height;
+
   const AnimatedCardWebComponent({
     super.key,
     required this.imagePath,
     required this.text,
     this.reverse = false,
     this.child,
+    this.width = 250,
+    this.height = 250,
   });
 
   @override
@@ -55,7 +63,8 @@ class _AnimatedCardWebComponentState extends State<AnimatedCardWebComponent>
             widget.child ??
                 ImageAssetComponent(
                   pathImage: widget.imagePath,
-                  width: 250,
+                  width: widget.width,
+                  height: widget.height,
                 ),
             const SizedBox(
               height: 10,

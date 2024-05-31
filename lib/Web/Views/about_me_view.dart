@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:landing_page/Components/image_asset_component.dart';
 import 'package:landing_page/Components/sans_font_component.dart';
-import 'package:landing_page/Web/Components/row_of_skills_component.dart';
+import 'package:landing_page/Components/row_of_skills_component.dart';
 
 class AboutMeView extends StatelessWidget {
   const AboutMeView({super.key});
@@ -24,6 +24,7 @@ class AboutMeView extends StatelessWidget {
               ImageAssetComponent(
                 pathImage: 'assets/images/web.jpg',
                 width: 400,
+                height: 400,
               ),
               Flexible(
                 child: Column(
@@ -43,11 +44,7 @@ class AboutMeView extends StatelessWidget {
                     ),
                     Sans(
                       text:
-                          'I strive to create and ensure, a greate user expirience with beatiful astounding performance ',
-                    ),
-                    Sans(
-                      text:
-                          'with state of the art security for Android, Ios, Web, Mac, Linux and Windows',
+                          'I strive to create and ensure, a greate user expirience with beatiful astounding performance with state of the art security for Android, Ios, Web, Mac, Linux and Windows',
                     ),
                     SizedBox(
                       height: 10,
