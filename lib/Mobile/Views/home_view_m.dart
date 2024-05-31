@@ -3,6 +3,7 @@ import 'package:landing_page/Components/circle_avatar_component.dart';
 import 'package:landing_page/Components/contact_details_component.dart';
 import 'package:landing_page/Components/message_text_container_component.dart';
 import 'package:landing_page/Components/sans_font_component.dart';
+import 'package:landing_page/Constants/string_constants.dart';
 
 class HomeViewM extends StatefulWidget {
   const HomeViewM({super.key});
@@ -40,14 +41,14 @@ class _HomeViewMState extends State<HomeViewM> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 MessageTextContainerComponent(
-                  text: 'Welcome, my name is...',
+                  text: StringConstants.welcome,
                 ),
                 SansBold(
-                  text: 'Ulises Shie Sotelo\nChopin',
+                  text: StringConstants.appName,
                   size: 40,
                 ),
                 Sans(
-                  text: 'Flutter Developer',
+                  text: StringConstants.developer,
                   size: 20,
                 ),
                 SizedBox(

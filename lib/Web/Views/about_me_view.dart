@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:landing_page/Components/image_asset_component.dart';
 import 'package:landing_page/Components/sans_font_component.dart';
 import 'package:landing_page/Components/row_of_skills_component.dart';
+import 'package:landing_page/Constants/string_constants.dart';
 
 class AboutMeView extends StatelessWidget {
   const AboutMeView({super.key});
@@ -21,10 +22,12 @@ class AboutMeView extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              ImageAssetComponent(
-                pathImage: 'assets/images/web.jpg',
-                width: 400,
-                height: 400,
+              Flexible(
+                child: ImageAssetComponent(
+                  pathImage: StringConstants.aboutImage,
+                  width: 400,
+                  height: 400,
+                ),
               ),
               Flexible(
                 child: Column(
@@ -32,19 +35,14 @@ class AboutMeView extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     SansBold(
-                      text: 'About Me',
+                      text: StringConstants.aboutMe,
                       size: 40,
                     ),
                     SizedBox(
                       height: 20,
                     ),
                     Sans(
-                      text:
-                          'Hello! I\'m Ulises Shie Sotelo Chopin, I specialize in fllutter development.',
-                    ),
-                    Sans(
-                      text:
-                          'I strive to create and ensure, a greate user expirience with beatiful astounding performance with state of the art security for Android, Ios, Web, Mac, Linux and Windows',
+                      text: StringConstants.aboutMeDescription,
                     ),
                     SizedBox(
                       height: 10,

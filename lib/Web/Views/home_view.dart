@@ -3,6 +3,7 @@ import 'package:landing_page/Components/circle_avatar_component.dart';
 import 'package:landing_page/Components/message_text_container_component.dart';
 import 'package:landing_page/Components/sans_font_component.dart';
 import 'package:landing_page/Components/contact_details_component.dart';
+import 'package:landing_page/Constants/string_constants.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({
@@ -25,20 +26,20 @@ class HomeView extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               MessageTextContainerComponent(
-                text: 'Welcome, my name is...',
+                text: StringConstants.welcome,
               ),
               SizedBox(
                 height: 10,
               ),
               SansBold(
-                text: 'Ulises Shie Sotelo \nChopin',
+                text: StringConstants.appName,
                 size: 55,
               ),
               SizedBox(
                 height: 10,
               ),
               SansBold(
-                text: 'Flutter Developer',
+                text: StringConstants.developer,
                 size: 30,
               ),
               SizedBox(

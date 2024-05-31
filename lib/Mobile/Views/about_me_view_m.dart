@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:landing_page/Components/image_asset_component.dart';
 import 'package:landing_page/Components/sans_font_component.dart';
 import 'package:landing_page/Components/row_of_skills_component.dart';
+import 'package:landing_page/Constants/string_constants.dart';
 
 class AboutMeViewM extends StatelessWidget {
   const AboutMeViewM({super.key});
@@ -21,7 +22,7 @@ class AboutMeViewM extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             SansBold(
-              text: 'About Me',
+              text: StringConstants.aboutMe,
               size: 40,
             ),
             Column(
@@ -33,8 +34,7 @@ class AboutMeViewM extends StatelessWidget {
                   height: 20,
                 ),
                 Sans(
-                  text:
-                      'Hello! I\'m Ulises Shie Sotelo Chopin, I specialize in fllutter development. I strive to create and ensure, a greate user expirience with beatiful astounding performance with state of the art security for Android, Ios, Web, Mac, Linux and Windows',
+                  text: StringConstants.aboutMeDescription,
                   textAlign: TextAlign.center,
                 ),
                 SizedBox(
@@ -44,7 +44,7 @@ class AboutMeViewM extends StatelessWidget {
               ],
             ),
             ImageAssetComponent(
-              pathImage: 'assets/images/web.jpg',
+              pathImage: StringConstants.aboutImage,
               width: 400,
               height: 400,
             ),

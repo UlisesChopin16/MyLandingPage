@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:landing_page/Components/image_asset_component.dart';
+import 'package:landing_page/Constants/string_constants.dart';
 import 'package:landing_page/Web/Components/animated_card_web_component.dart';
 
 class ColumnOfWorksComponent extends StatelessWidget {
@@ -8,14 +9,14 @@ class ColumnOfWorksComponent extends StatelessWidget {
   static const List<Widget> children = [
     Spacer(),
     AnimatedCardWebComponent(
-      imagePath: 'assets/images/webL.png',
+      imagePath: StringConstants.webImage,
       text: 'Web development',
       width: 200,
       height: 150,
     ),
     Spacer(),
     AnimatedCardWebComponent(
-      imagePath: 'assets/images/app.png',
+      imagePath: StringConstants.mobileImage,
       text: 'App development',
       width: 200,
       height: 150,
@@ -33,17 +34,17 @@ class ColumnOfWorksComponent extends StatelessWidget {
           runSpacing: 10,
           children: [
             ImageAssetComponent(
-              pathImage: 'assets/images/mariaDB.png',
+              pathImage: StringConstants.mariaDBImage,
               width: 80,
               height: 80,
             ),
             ImageAssetComponent(
-              pathImage: 'assets/images/mysql.png',
+              pathImage: StringConstants.mysqlImage,
               width: 70,
               height: 80,
             ),
             ImageAssetComponent(
-              pathImage: 'assets/images/firebase.png',
+              pathImage: StringConstants.firebaseImage,
               width: 100,
               height: 80,
             ),
