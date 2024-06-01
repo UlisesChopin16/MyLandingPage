@@ -11,13 +11,13 @@ class TabsMobileComponent extends StatelessWidget {
   /// for default the size is 10
   final double sizeBetween;
 
-  final void Function() onPressed;
+  final void Function(BuildContext)? onPressed;
 
   const TabsMobileComponent({
     super.key,
     required this.text,
     required this.iconData,
-    required this.onPressed,
+    this.onPressed,
     this.sizeBetween = 10,
   });
 
@@ -26,7 +26,11 @@ class TabsMobileComponent extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 30.0),
       child: MaterialButton(
-        onPressed: onPressed,
+        onPressed: () {
+          if (onPressed != null) {
+            onPressed!(context);
+          }
+        },
         elevation: 15,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(10),

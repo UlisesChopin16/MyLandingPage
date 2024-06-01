@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:landing_page/Components/contact_form_component.dart';
+import 'package:landing_page/Mobile/Components/about_me_component_m.dart';
 import 'package:landing_page/Mobile/Components/drawer_for_mobile_component.dart';
-import 'package:landing_page/Mobile/Views/about_me_view_m.dart';
-import 'package:landing_page/Mobile/Views/experience_view_m.dart';
-import 'package:landing_page/Mobile/Views/home_view_m.dart';
-import 'package:landing_page/contact_form_view.dart';
+import 'package:landing_page/Mobile/Components/experience_component_m.dart';
+import 'package:landing_page/Mobile/Components/home_component_m.dart';
+import 'package:landing_page/Mobile/Components/mobile_tab_bar_component.dart';
 
 class LandingPageMobileView extends StatefulWidget {
   const LandingPageMobileView({super.key});
@@ -19,10 +20,8 @@ class _LandingPageMobileViewState extends State<LandingPageMobileView> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(
-        elevation: 0,
-        backgroundColor: Colors.white,
-        title: const Text('Landing Page Mobile View'),
+      appBar: const MobileTabBarComponent(
+        title: 'Landing Page Mobile View',
       ),
       drawer: const DrawerForMobileComponent(),
       body: Center(
@@ -33,9 +32,9 @@ class _LandingPageMobileViewState extends State<LandingPageMobileView> {
           child: ListView(
             controller: _scrollController,
             children: const <Widget>[
-              HomeViewM(),
-              AboutMeViewM(),
-              ExperienceViewM(),
+              HomeComponentM(),
+              AboutMeComponentM(),
+              ExperienceComponentM(),
               SizedBox(
                 height: 30.0,
               ),
@@ -47,3 +46,5 @@ class _LandingPageMobileViewState extends State<LandingPageMobileView> {
     );
   }
 }
+
+

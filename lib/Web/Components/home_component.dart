@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:landing_page/Components/circle_avatar_component.dart';
+import 'package:landing_page/Components/contact_details_component.dart';
 import 'package:landing_page/Components/message_text_container_component.dart';
 import 'package:landing_page/Components/sans_font_component.dart';
-import 'package:landing_page/Components/contact_details_component.dart';
-import 'package:landing_page/Constants/string_constants.dart';
+import 'package:landing_page/Constants/constant_strings.dart';
 
-class HomeView extends StatelessWidget {
-  const HomeView({
+class HomeComponent extends StatelessWidget {
+  const HomeComponent({
     super.key,
   });
 
@@ -26,20 +26,20 @@ class HomeView extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               MessageTextContainerComponent(
-                text: StringConstants.welcome,
+                text: ConstantStrings.welcome,
               ),
               SizedBox(
                 height: 10,
               ),
               SansBold(
-                text: StringConstants.appName,
+                text: ConstantStrings.appName,
                 size: 55,
               ),
               SizedBox(
                 height: 10,
               ),
               SansBold(
-                text: StringConstants.developer,
+                text: ConstantStrings.developer,
                 size: 30,
               ),
               SizedBox(

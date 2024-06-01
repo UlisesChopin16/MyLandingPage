@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:landing_page/Components/animated_card_Image_component.dart';
 import 'package:landing_page/Components/image_asset_component.dart';
-import 'package:landing_page/Constants/string_constants.dart';
-import 'package:landing_page/Web/Components/animated_card_web_component.dart';
+import 'package:landing_page/Constants/constant_strings.dart';
 
 class RowOfWorksComponent extends StatefulWidget {
   const RowOfWorksComponent({super.key});
@@ -15,18 +15,18 @@ class _RowOfWorksComponentState extends State<RowOfWorksComponent> {
 
   static const List<Widget> children = [
     Spacer(),
-    AnimatedCardWebComponent(
-      imagePath: StringConstants.webImage,
+    AnimatedCardImageComponent(
+      imagePath: ConstantStrings.webImage,
       text: 'Web development',
     ),
     Spacer(),
-    AnimatedCardWebComponent(
-      imagePath: StringConstants.mobileImage,
+    AnimatedCardImageComponent(
+      imagePath: ConstantStrings.appImage,
       text: 'App development',
       reverse: true,
     ),
     Spacer(),
-    AnimatedCardWebComponent(
+    AnimatedCardImageComponent(
       imagePath: '',
       text: 'Back-end development',
       child: SizedBox(
@@ -38,17 +38,17 @@ class _RowOfWorksComponentState extends State<RowOfWorksComponent> {
           runSpacing: 10,
           children: [
             ImageAssetComponent(
-              pathImage: StringConstants.mariaDBImage,
+              pathImage: ConstantStrings.mariaDBImage,
               width: 120,
               height: 120,
             ),
             ImageAssetComponent(
-              pathImage: StringConstants.mysqlImage,
+              pathImage: ConstantStrings.mysqlImage,
               width: 120,
               height: 120,
             ),
             ImageAssetComponent(
-              pathImage: StringConstants.firebaseImage,
+              pathImage: ConstantStrings.firebaseImage,
               width: 120,
               height: 120,
             ),

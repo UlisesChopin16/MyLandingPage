@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:landing_page/Components/svg_icon_component.dart';
+import 'package:landing_page/Constants/constant_strings.dart';
 import 'package:landing_page/Constants/pallete.dart';
-import 'package:landing_page/Constants/string_constants.dart';
 import 'package:landing_page/Mobile/Components/drawer_header_component.dart';
 import 'package:landing_page/Mobile/Components/tabs_mobile_component.dart';
+import 'package:landing_page/tabbar_functions.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 class DrawerForMobileComponent extends StatefulWidget {
@@ -16,8 +17,8 @@ class DrawerForMobileComponent extends StatefulWidget {
 class _DrawerForMobileComponentState extends State<DrawerForMobileComponent> {
   static const List<Color> colors = Pallete.socialMediaColors;
 
-  Iterable keys = StringConstants.socialMedia.keys;
-  Iterable values = StringConstants.socialMedia.values;
+  Iterable keys = ConstantStrings.socialMedia.keys;
+  Iterable values = ConstantStrings.socialMedia.values;
 
   static const heightSpace = SizedBox(
     height: 25,
@@ -37,39 +38,39 @@ class _DrawerForMobileComponentState extends State<DrawerForMobileComponent> {
           const SizedBox(
             height: 10,
           ),
-          TabsMobileComponent(
-            text: 'Home',
+          const TabsMobileComponent(
+            text: ConstantStrings.home,
             sizeBetween: 20,
             iconData: Icons.home,
-            onPressed: () {},
+            onPressed: TabbarFunctions.homeTab,
           ),
           heightSpace,
-          TabsMobileComponent(
-            text: 'Works',
+          const TabsMobileComponent(
+            text: ConstantStrings.experience,
             sizeBetween: 20,
             iconData: Icons.work,
-            onPressed: () {},
+            onPressed: TabbarFunctions.experienceTab,
           ),
           heightSpace,
-          TabsMobileComponent(
-            text: 'Blog',
+          const TabsMobileComponent(
+            text: ConstantStrings.blog,
             sizeBetween: 20,
             iconData: Icons.book,
-            onPressed: () {},
+            onPressed: TabbarFunctions.blogTab,
           ),
           heightSpace,
-          TabsMobileComponent(
-            text: 'About',
+          const TabsMobileComponent(
+            text: ConstantStrings.aboutMe,
             sizeBetween: 20,
             iconData: Icons.person,
-            onPressed: () {},
+            onPressed: TabbarFunctions.aboutTab,
           ),
           heightSpace,
-          TabsMobileComponent(
-            text: 'Contact',
+          const TabsMobileComponent(
+            text: ConstantStrings.contactMe,
             sizeBetween: 20,
             iconData: Icons.contact_mail,
-            onPressed: () {},
+            onPressed: TabbarFunctions.contactTab,
           ),
           heightSpace,
           Row(

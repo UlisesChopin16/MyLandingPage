@@ -4,7 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 class TabbarTextComponent extends StatefulWidget {
   final String text;
   final double? fontSize;
-  final void Function()? onTap;
+  final void Function(BuildContext)? onTap;
   const TabbarTextComponent({
     super.key,
     required this.text,
@@ -22,7 +22,11 @@ class _TabbarTextComponentState extends State<TabbarTextComponent> {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: widget.onTap,
+      onTap: () {
+        if (widget.onTap != null) {
+          widget.onTap!(context);
+        }
+      },
       child: MouseRegion(
         onEnter: (event) {
           setState(() {

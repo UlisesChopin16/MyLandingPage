@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
+import 'package:landing_page/Constants/constant_strings.dart';
 import 'package:landing_page/Web/Components/tabbar_text_component.dart';
 import 'package:landing_page/tabbar_functions.dart';
 
@@ -10,35 +10,34 @@ class ListOfTabBarsComponent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return const Row(
       children: <Widget>[
-        const Spacer(),
+        Spacer(),
         TabbarTextComponent(
-          text: 'Home',
-          onTap: () {
-            TabbarFunctions.homeTab(context);
-          },
+          text: ConstantStrings.home,
+          onTap: TabbarFunctions.homeTab,
         ),
-        const Spacer(),
-        const TabbarTextComponent(
-          text: 'Experience',
-        ),
-        const Spacer(),
-        const TabbarTextComponent(
-          text: 'Blog',
-        ),
-        const Spacer(),
-        const TabbarTextComponent(
-          text: 'About',
-        ),
-        const Spacer(),
+        Spacer(),
         TabbarTextComponent(
-          text: 'Contact',
-          onTap: () {
-            context.go('/contact-me');
-          },
+          text: ConstantStrings.experience,
+          onTap: TabbarFunctions.experienceTab,
         ),
-        const Spacer(
+        Spacer(),
+        TabbarTextComponent(
+          text: ConstantStrings.blog,
+          onTap: TabbarFunctions.blogTab,
+        ),
+        Spacer(),
+        TabbarTextComponent(
+          text: ConstantStrings.aboutMe,
+          onTap: TabbarFunctions.aboutTab,
+        ),
+        Spacer(),
+        TabbarTextComponent(
+          text: ConstantStrings.contactMe,
+          onTap: TabbarFunctions.contactTab,
+        ),
+        Spacer(
           flex: 8,
         ),
       ],

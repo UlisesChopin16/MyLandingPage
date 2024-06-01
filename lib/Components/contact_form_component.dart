@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:landing_page/Components/sans_font_component.dart';
 import 'package:landing_page/Components/text_form_component.dart';
+import 'package:landing_page/Constants/constant_strings.dart';
 
 class ContactFormView extends StatefulWidget {
   const ContactFormView({super.key});
@@ -61,7 +62,7 @@ class _ContactFormViewState extends State<ContactFormView> {
                 child: Padding(
                   padding: EdgeInsets.only(bottom: 20.0),
                   child: SansBold(
-                    text: 'Contact me',
+                    text: ConstantStrings.contactMe,
                     size: 40,
                   ),
                 ),

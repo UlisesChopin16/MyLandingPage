@@ -1,31 +1,31 @@
 import 'package:flutter/material.dart';
+import 'package:landing_page/Components/animated_card_Image_component.dart';
 import 'package:landing_page/Components/image_asset_component.dart';
-import 'package:landing_page/Constants/string_constants.dart';
-import 'package:landing_page/Web/Components/animated_card_web_component.dart';
+import 'package:landing_page/Constants/constant_strings.dart';
 
 class ColumnOfWorksComponent extends StatelessWidget {
   const ColumnOfWorksComponent({super.key});
 
   static const List<Widget> children = [
     Spacer(),
-    AnimatedCardWebComponent(
-      imagePath: StringConstants.webImage,
-      text: 'Web development',
+    AnimatedCardImageComponent(
+      imagePath: ConstantStrings.webImage,
+      text: ConstantStrings.webDev,
       width: 200,
       height: 150,
     ),
     Spacer(),
-    AnimatedCardWebComponent(
-      imagePath: StringConstants.mobileImage,
-      text: 'App development',
+    AnimatedCardImageComponent(
+      imagePath: ConstantStrings.appImage,
+      text: ConstantStrings.appDev,
       width: 200,
       height: 150,
       reverse: true,
     ),
     Spacer(),
-    AnimatedCardWebComponent(
+    AnimatedCardImageComponent(
       imagePath: '',
-      text: 'Back-end development',
+      text: ConstantStrings.backDev,
       child: SizedBox(
         width: 200,
         child: Wrap(
@@ -34,17 +34,17 @@ class ColumnOfWorksComponent extends StatelessWidget {
           runSpacing: 10,
           children: [
             ImageAssetComponent(
-              pathImage: StringConstants.mariaDBImage,
+              pathImage: ConstantStrings.mariaDBImage,
               width: 80,
               height: 80,
             ),
             ImageAssetComponent(
-              pathImage: StringConstants.mysqlImage,
+              pathImage: ConstantStrings.mysqlImage,
               width: 70,
               height: 80,
             ),
             ImageAssetComponent(
-              pathImage: StringConstants.firebaseImage,
+              pathImage: ConstantStrings.firebaseImage,
               width: 100,
               height: 80,
             ),

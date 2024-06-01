@@ -3,16 +3,16 @@ import 'package:landing_page/Components/circle_avatar_component.dart';
 import 'package:landing_page/Components/contact_details_component.dart';
 import 'package:landing_page/Components/message_text_container_component.dart';
 import 'package:landing_page/Components/sans_font_component.dart';
-import 'package:landing_page/Constants/string_constants.dart';
+import 'package:landing_page/Constants/constant_strings.dart';
 
-class HomeViewM extends StatefulWidget {
-  const HomeViewM({super.key});
+class HomeComponentM extends StatefulWidget {
+  const HomeComponentM({super.key});
 
   @override
-  State<HomeViewM> createState() => _HomeViewMState();
+  State<HomeComponentM> createState() => _HomeComponentMState();
 }
 
-class _HomeViewMState extends State<HomeViewM> {
+class _HomeComponentMState extends State<HomeComponentM> {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
@@ -41,14 +41,14 @@ class _HomeViewMState extends State<HomeViewM> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 MessageTextContainerComponent(
-                  text: StringConstants.welcome,
+                  text: ConstantStrings.welcome,
                 ),
                 SansBold(
-                  text: StringConstants.appName,
+                  text: ConstantStrings.appName,
                   size: 40,
                 ),
                 Sans(
-                  text: StringConstants.developer,
+                  text: ConstantStrings.developer,
                   size: 20,
                 ),
                 SizedBox(

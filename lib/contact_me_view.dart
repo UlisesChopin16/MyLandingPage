@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:landing_page/Components/contact_form_component.dart';
 import 'package:landing_page/Components/image_asset_component.dart';
-import 'package:landing_page/Constants/string_constants.dart';
+import 'package:landing_page/Constants/constant_strings.dart';
 import 'package:landing_page/Mobile/Components/drawer_for_mobile_component.dart';
 import 'package:landing_page/Web/Components/drawer_for_web_component.dart';
 import 'package:landing_page/Web/Components/list_of_tab_bars_component.dart';
-import 'package:landing_page/contact_form_view.dart';
 
 class ContactMeView extends StatefulWidget {
   const ContactMeView({super.key});
@@ -27,7 +27,7 @@ class _ContactMeViewState extends State<ContactMeView> {
             expandedHeight: 600,
             flexibleSpace: const FlexibleSpaceBar(
               background: ImageAssetComponent(
-                pathImage: StringConstants.contactMeImage,
+                pathImage: ConstantStrings.contactMeImage,
                 fit: BoxFit.cover,
               ),
             ),

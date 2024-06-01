@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:landing_page/Components/sans_font_component.dart';
+import 'package:landing_page/Constants/constant_strings.dart';
 import 'package:landing_page/Web/Components/row_of_works_component.dart';
 
-class ExperienceView extends StatefulWidget {
-  const ExperienceView({super.key});
+class ExperienceComponent extends StatefulWidget {
+  const ExperienceComponent({super.key});
 
   @override
-  State<ExperienceView> createState() => _ExperienceViewState();
+  State<ExperienceComponent> createState() => _ExperienceComponentState();
 }
 
-class _ExperienceViewState extends State<ExperienceView> {
+class _ExperienceComponentState extends State<ExperienceComponent> {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
@@ -25,7 +26,7 @@ class _ExperienceViewState extends State<ExperienceView> {
             child: Padding(
               padding: EdgeInsets.only(bottom: 20.0),
               child: SansBold(
-                text: 'What I Do',
+                text: ConstantStrings.whatIDo,
                 size: 40,
               ),
             ),

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:landing_page/Components/contact_form_component.dart';
+import 'package:landing_page/Web/Components/about_me_component.dart';
 import 'package:landing_page/Web/Components/drawer_for_web_component.dart';
+import 'package:landing_page/Web/Components/experience_component.dart';
+import 'package:landing_page/Web/Components/home_component.dart';
 import 'package:landing_page/Web/Components/tab_bar_component.dart';
-import 'package:landing_page/Web/Views/about_me_view.dart';
-import 'package:landing_page/Web/Views/experience_view.dart';
-import 'package:landing_page/Web/Views/home_view.dart';
-import 'package:landing_page/contact_form_view.dart';
 
 class LandingPageWebView extends StatefulWidget {
   const LandingPageWebView({super.key});
@@ -30,9 +30,9 @@ class _LandingPageWebViewState extends State<LandingPageWebView> {
           child: ListView(
             controller: _scrollController,
             children: const <Widget>[
-              HomeView(),
-              AboutMeView(),
-              ExperienceView(),
+              HomeComponent(),
+              AboutMeComponent(),
+              ExperienceComponent(),
               ContactFormView(),
             ],
           ),
