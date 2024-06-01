@@ -5,7 +5,7 @@ class TabbarFunctions {
 
   static void homeTab(BuildContext context) {
     // Do something
-    context.go('/home');
+    context.go('/');
   }
 
   static void experienceTab() {
