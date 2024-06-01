@@ -22,7 +22,7 @@ class _HomeViewMState extends State<HomeViewM> {
       width: width,
       height: height > 650 ? height : 650,
       child: const Padding(
-        padding: EdgeInsets.only(left: 20.0),
+        padding: EdgeInsets.symmetric(horizontal: 30.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,

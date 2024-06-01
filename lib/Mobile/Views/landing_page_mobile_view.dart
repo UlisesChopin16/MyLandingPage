@@ -3,6 +3,7 @@ import 'package:landing_page/Mobile/Components/drawer_for_mobile_component.dart'
 import 'package:landing_page/Mobile/Views/about_me_view_m.dart';
 import 'package:landing_page/Mobile/Views/experience_view_m.dart';
 import 'package:landing_page/Mobile/Views/home_view_m.dart';
+import 'package:landing_page/contact_form_view.dart';
 
 class LandingPageMobileView extends StatefulWidget {
   const LandingPageMobileView({super.key});
@@ -35,7 +36,10 @@ class _LandingPageMobileViewState extends State<LandingPageMobileView> {
               HomeViewM(),
               AboutMeViewM(),
               ExperienceViewM(),
-              SizedBox(height: 100)
+              SizedBox(
+                height: 30.0,
+              ),
+              ContactFormView()
             ],
           ),
         ),

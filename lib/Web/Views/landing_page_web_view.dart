@@ -2,10 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:landing_page/Web/Components/drawer_for_web_component.dart';
 import 'package:landing_page/Web/Components/tab_bar_component.dart';
 import 'package:landing_page/Web/Views/about_me_view.dart';
-import 'package:landing_page/Web/Views/contact_view.dart';
 import 'package:landing_page/Web/Views/experience_view.dart';
 import 'package:landing_page/Web/Views/home_view.dart';
-// import 'package:landing_page/Web/Components/tabbar_text_component.dart';
+import 'package:landing_page/contact_form_view.dart';
 
 class LandingPageWebView extends StatefulWidget {
   const LandingPageWebView({super.key});
@@ -24,20 +23,21 @@ class _LandingPageWebViewState extends State<LandingPageWebView> {
       appBar: const TabBarComponent(),
       drawer: const DrawerForWebComponent(),
       body: Center(
-          child: Scrollbar(
-        controller: _scrollController,
-        thumbVisibility: true,
-        trackVisibility: true,
-        child: ListView(
+        child: Scrollbar(
           controller: _scrollController,
-          children: const <Widget>[
-            HomeView(),
-            AboutMeView(),
-            ExperienceView(),
-            ContactView(),
-          ],
+          thumbVisibility: true,
+          trackVisibility: true,
+          child: ListView(
+            controller: _scrollController,
+            children: const <Widget>[
+              HomeView(),
+              AboutMeView(),
+              ExperienceView(),
+              ContactFormView(),
+            ],
+          ),
         ),
-      )),
+      ),
     );
   }
 }

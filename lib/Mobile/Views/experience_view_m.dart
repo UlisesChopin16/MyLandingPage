@@ -17,21 +17,24 @@ class _ExperienceViewMState extends State<ExperienceViewM> {
     return SizedBox(
       height: height > 850 ? height : 850,
       width: width,
-      child: const Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          Center(
-            child: Padding(
-              padding: EdgeInsets.only(bottom: 20.0),
-              child: SansBold(
-                text: 'What I Do',
-                size: 40,
+      child: const Padding(
+        padding: EdgeInsets.symmetric(horizontal: 30.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Center(
+              child: Padding(
+                padding: EdgeInsets.only(bottom: 20.0),
+                child: SansBold(
+                  text: 'What I Do',
+                  size: 40,
+                ),
               ),
             ),
-          ),
-          Expanded(child: ColumnOfWorksComponent())
-        ],
+            Expanded(child: ColumnOfWorksComponent())
+          ],
+        ),
       ),
     );
   }

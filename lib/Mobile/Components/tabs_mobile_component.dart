@@ -1,12 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 import 'package:landing_page/Components/icon_and_text_component.dart';
 
 class TabsMobileComponent extends StatelessWidget {
   final String text;
-
-  /// the route is the path that the button will take when pressed
-  final String route;
 
   /// the iconData is the icon that will be displayed in the button
   final IconData iconData;
@@ -15,11 +11,13 @@ class TabsMobileComponent extends StatelessWidget {
   /// for default the size is 10
   final double sizeBetween;
 
+  final void Function() onPressed;
+
   const TabsMobileComponent({
     super.key,
     required this.text,
     required this.iconData,
-    required this.route,
+    required this.onPressed,
     this.sizeBetween = 10,
   });
 
@@ -28,9 +26,7 @@ class TabsMobileComponent extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 30.0),
       child: MaterialButton(
-        onPressed: () {
-          context.go(route);
-        },
+        onPressed: onPressed,
         elevation: 15,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(10),

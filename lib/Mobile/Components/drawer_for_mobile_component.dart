@@ -37,39 +37,39 @@ class _DrawerForMobileComponentState extends State<DrawerForMobileComponent> {
           const SizedBox(
             height: 10,
           ),
-          const TabsMobileComponent(
+          TabsMobileComponent(
             text: 'Home',
             sizeBetween: 20,
             iconData: Icons.home,
-            route: '/home',
+            onPressed: () {},
           ),
           heightSpace,
-          const TabsMobileComponent(
+          TabsMobileComponent(
             text: 'Works',
             sizeBetween: 20,
             iconData: Icons.work,
-            route: '/works',
+            onPressed: () {},
           ),
           heightSpace,
-          const TabsMobileComponent(
+          TabsMobileComponent(
             text: 'Blog',
             sizeBetween: 20,
             iconData: Icons.book,
-            route: '/blog',
+            onPressed: () {},
           ),
           heightSpace,
-          const TabsMobileComponent(
+          TabsMobileComponent(
             text: 'About',
             sizeBetween: 20,
             iconData: Icons.person,
-            route: '/about',
+            onPressed: () {},
           ),
           heightSpace,
-          const TabsMobileComponent(
+          TabsMobileComponent(
             text: 'Contact',
             sizeBetween: 20,
             iconData: Icons.contact_mail,
-            route: '/contact',
+            onPressed: () {},
           ),
           heightSpace,
           Row(

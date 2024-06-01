@@ -25,39 +25,45 @@ class _DrawerForWebComponentState extends State<DrawerForWebComponent> {
 
   @override
   Widget build(BuildContext context) {
+
+    double height = MediaQuery.of(context).size.height;
+
+    var column = Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            const CircleAvatarComponent(radius: 100),
+            const SizedBox(
+              height: 20,
+            ),
+            const SansBold(
+              text: 'Ulises Shie Sotelo Chopin',
+              size: 30,
+              textAlign: TextAlign.center,
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: List.generate(
+                keys.length,
+                (index) => SvgIconTextComponent(
+                  text: keys.elementAt(index),
+                  animate: true,
+                  color: colors[index],
+                  size: 40,
+                  imagePath: 'assets/images/icons/${keys.elementAt(index).toLowerCase()}.svg',
+                  onTap: () => onTap(values.elementAt(index)),
+                ),
+              ),
+            )
+          ],
+        );
     return Drawer(
       backgroundColor: Colors.white,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          const CircleAvatarComponent(radius: 100),
-          const SizedBox(
-            height: 20,
-          ),
-          const SansBold(
-            text: 'Ulises Shie Sotelo Chopin',
-            size: 30,
-            textAlign: TextAlign.center,
-          ),
-          const SizedBox(
-            height: 20,
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: List.generate(
-              keys.length,
-              (index) => SvgIconTextComponent(
-                text: keys.elementAt(index),
-                animate: true,
-                color: colors[index],
-                size: 40,
-                imagePath: 'assets/images/icons/${keys.elementAt(index).toLowerCase()}.svg',
-                onTap: () => onTap(values.elementAt(index)),
-              ),
-            ),
-          )
-        ],
+      child: height > 500 ? column : SingleChildScrollView(
+        child: column,
       ),
     );
   }
