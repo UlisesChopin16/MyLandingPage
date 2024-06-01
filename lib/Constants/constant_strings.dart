@@ -32,6 +32,7 @@ class ConstantStrings {
   static const firebaseImage = 'assets/images/firebase.png';
 
   static const String contactMeImage = 'assets/images/contact_image.jpg';
+  static const String blogImage = 'assets/images/blog.jpg';
 
   static const Map<String, String> socialMedia = {
     'Github': 'https://github.com/UlisesChopin16',

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:landing_page/Mobile/Views/about_me_view_m.dart';
 import 'package:landing_page/Web/Views/about_me_view.dart';
+import 'package:landing_page/blog_view.dart';
 import 'package:landing_page/check_size_view.dart';
 import 'package:landing_page/contact_me_view.dart';
 
@@ -13,10 +14,10 @@ class Routes {
   static const String contactMe = '/contact-me';
 
   static GoRouter router = GoRouter(
-    initialLocation: '/',
+    initialLocation: home,
     routes: [
       GoRoute(
-        path: '/',
+        path: home,
         builder: (context, state) {
           return const CheckSizeView();
         },
@@ -32,6 +33,10 @@ class Routes {
             }
           },
         ),
+      ),
+      GoRoute(
+        path: blog,
+        builder: (context, state) => const BlogView(),
       ),
       GoRoute(
         path: contactMe,

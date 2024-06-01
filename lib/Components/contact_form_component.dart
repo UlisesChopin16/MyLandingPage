@@ -5,7 +5,11 @@ import 'package:landing_page/Components/text_form_component.dart';
 import 'package:landing_page/Constants/constant_strings.dart';
 
 class ContactFormView extends StatefulWidget {
-  const ContactFormView({super.key});
+  final bool title;
+  const ContactFormView({
+    super.key,
+    this.title = true,
+  });
 
   @override
   State<ContactFormView> createState() => _ContactFormViewState();
@@ -58,6 +62,7 @@ class _ContactFormViewState extends State<ContactFormView> {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+              if (widget.title)
               const Center(
                 child: Padding(
                   padding: EdgeInsets.only(bottom: 20.0),

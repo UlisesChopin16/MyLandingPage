@@ -15,7 +15,7 @@ class TabbarFunctions {
 
   static void blogTab(BuildContext context) {
     // Do something
-    
+    context.go(Routes.blog);
   }
 
   static void aboutTab(BuildContext context) {
