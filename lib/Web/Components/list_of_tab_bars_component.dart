@@ -19,8 +19,8 @@ class ListOfTabBarsComponent extends StatelessWidget {
         ),
         Spacer(),
         TabbarTextComponent(
-          text: ConstantStrings.experience,
-          onTap: TabbarFunctions.experienceTab,
+          text: ConstantStrings.works,
+          onTap: TabbarFunctions.worksTab,
         ),
         Spacer(),
         TabbarTextComponent(

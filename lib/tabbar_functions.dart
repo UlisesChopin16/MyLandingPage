@@ -3,14 +3,14 @@ import 'package:go_router/go_router.dart';
 import 'package:landing_page/routes.dart';
 
 class TabbarFunctions {
-
   static void homeTab(BuildContext context) {
     // Do something
     context.go(Routes.home);
   }
 
-  static void experienceTab(BuildContext context) {
+  static void worksTab(BuildContext context) {
     // Do something
+    context.go(Routes.works);
   }
 
   static void blogTab(BuildContext context) {

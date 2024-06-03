@@ -2,10 +2,19 @@ class ConstantStrings {
   static const String appName = 'Ulises Shie Sotelo\nChopin';
   static const String name = 'Ulises Shie Sotelo Chopin';
   static const String home = 'Home';
-  static const String experience = 'Experience';
+  static const String works = 'Works';
   static const String blog = 'Blog';
   static const String welcome = 'Welcome, my name is...';
   static const String developer = 'Flutter Developer';
+
+
+  static const String worksImage = 'assets/images/works.jpg';
+  static const String imageWebScreen = 'assets/images/web_screen.png';
+  static const String imageAppScreen = 'assets/images/app_screen.png';
+  static const String portafolio = 'Portafolio';
+  static const String portafolioDescription =
+      'Deployed on Android, Ios and Web, the portafolio project was truly an achievement. I used flutter to develop the beautiful and responsive UI, and Firebase, mariaDB or MySQL for the back-end.';
+
   static const String aboutImage = 'assets/images/web.jpg';
   static const String aboutMe = 'About Me';
   static const String whatIDo = 'What I Do';

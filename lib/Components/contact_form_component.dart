@@ -3,18 +3,18 @@ import 'package:landing_page/Components/sans_font_component.dart';
 import 'package:landing_page/Components/text_form_component.dart';
 import 'package:landing_page/Constants/constant_strings.dart';
 
-class ContactFormView extends StatefulWidget {
+class ContactFormComponent extends StatefulWidget {
   final bool title;
-  const ContactFormView({
+  const ContactFormComponent({
     super.key,
     this.title = true,
   });
 
   @override
-  State<ContactFormView> createState() => _ContactFormViewState();
+  State<ContactFormComponent> createState() => _ContactFormComponentState();
 }
 
-class _ContactFormViewState extends State<ContactFormView> {
+class _ContactFormComponentState extends State<ContactFormComponent> {
   bool isValidEmail(String? email) {
     // if email is null, return false
     if (email == null) {
@@ -48,8 +48,7 @@ class _ContactFormViewState extends State<ContactFormView> {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
-    double height =
-        MediaQuery.of(context).size.height - AppBar().preferredSize.height;
+    double height = MediaQuery.of(context).size.height - AppBar().preferredSize.height;
 
     return Container(
       color: Colors.white,

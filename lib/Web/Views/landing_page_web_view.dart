@@ -33,7 +33,7 @@ class _LandingPageWebViewState extends State<LandingPageWebView> {
               HomeComponent(),
               AboutMeComponent(),
               ExperienceComponent(),
-              ContactFormView(),
+              ContactFormComponent(),
             ],
           ),
         ),

@@ -5,22 +5,34 @@ import 'package:landing_page/Web/Views/about_me_view.dart';
 import 'package:landing_page/blog_view.dart';
 import 'package:landing_page/check_size_view.dart';
 import 'package:landing_page/contact_me_view.dart';
+import 'package:landing_page/works_view.dart';
 
 class Routes {
   static const String home = '/';
-  static const String experience = '/experience';
+  static const String works = '/works';
   static const String blog = '/blog';
   static const String about = '/about-me';
   static const String contactMe = '/contact-me';
 
   static GoRouter router = GoRouter(
     initialLocation: home,
+    onException: (context, state, router) {
+      router.go(home);
+    },
     routes: [
       GoRoute(
         path: home,
         builder: (context, state) {
           return const CheckSizeView();
         },
+      ),
+      GoRoute(
+        path: works,
+        builder: (context, state) => const WorksView(),
+      ),
+      GoRoute(
+        path: blog,
+        builder: (context, state) => const BlogView(),
       ),
       GoRoute(
         path: about,
@@ -33,10 +45,6 @@ class Routes {
             }
           },
         ),
-      ),
-      GoRoute(
-        path: blog,
-        builder: (context, state) => const BlogView(),
       ),
       GoRoute(
         path: contactMe,

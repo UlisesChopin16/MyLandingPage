@@ -21,7 +21,7 @@ class _LandingPageMobileViewState extends State<LandingPageMobileView> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: const MobileTabBarComponent(
-        title: 'Landing Page Mobile View',
+        title: 'Home',
       ),
       drawer: const DrawerForMobileComponent(),
       body: Center(
@@ -38,7 +38,7 @@ class _LandingPageMobileViewState extends State<LandingPageMobileView> {
               SizedBox(
                 height: 30.0,
               ),
-              ContactFormView()
+              ContactFormComponent()
             ],
           ),
         ),
@@ -46,5 +46,3 @@ class _LandingPageMobileViewState extends State<LandingPageMobileView> {
     );
   }
 }
-
-

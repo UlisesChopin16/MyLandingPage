@@ -46,10 +46,10 @@ class _DrawerForMobileComponentState extends State<DrawerForMobileComponent> {
           ),
           heightSpace,
           const TabsMobileComponent(
-            text: ConstantStrings.experience,
+            text: ConstantStrings.works,
             sizeBetween: 20,
             iconData: Icons.work,
-            onPressed: TabbarFunctions.experienceTab,
+            onPressed: TabbarFunctions.worksTab,
           ),
           heightSpace,
           const TabsMobileComponent(

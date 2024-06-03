@@ -21,34 +21,37 @@ class _ContactMeViewState extends State<ContactMeView> {
     double height = MediaQuery.of(context).size.height - AppBar().preferredSize.height;
     return Scaffold(
       drawer: width > 800 ? const DrawerForWebComponent() : const DrawerForMobileComponent(),
-      body: CustomScrollView(
-        slivers: <Widget>[
-          SliverAppBar(
-            toolbarHeight: 55,
-            title: width > 800 ? const ListOfTabBarsComponent() : null,
-            backgroundColor: Colors.white,
-            expandedHeight: height > 800 ? 600 : 400,
-            flexibleSpace: FlexibleSpaceBar(
-              background: const ImageAssetComponent(
-                pathImage: ConstantStrings.contactMeImage,
-                fit: BoxFit.cover,
+      body: NestedScrollView(
+        headerSliverBuilder: (context, innerBoxIsScrolled) {
+          return [
+            SliverAppBar(
+              toolbarHeight: 55,
+              title: width > 800 ? const ListOfTabBarsComponent() : null,
+              backgroundColor: Colors.white,
+              expandedHeight: height > 800 ? 600 : 400,
+              flexibleSpace: FlexibleSpaceBar(
+                background: const ImageAssetComponent(
+                  pathImage: ConstantStrings.contactMeImage,
+                  fit: BoxFit.cover,
+                ),
+                centerTitle: true,
+                title: width < 800
+                    ? const SansBold(
+                        text: ConstantStrings.contactMe,
+                        size: 38,
+                      )
+                    : null,
               ),
-              centerTitle: true,
-              title: width < 800
-                  ? const SansBold(
-                      text: ConstantStrings.contactMe,
-                      size: 38,
-                    )
-                  : null,
             ),
-          ),
-          SliverToBoxAdapter(
-            child: ContactFormView(
-              title:  width < 800
-                  ? false : true,
-            ),
-          )
-        ],
+          ];
+        },
+        body: ListView(
+          children: [
+            ContactFormComponent(
+                title: width < 800 ? false : true,
+              ),
+          ],
+        )
       ),
     );
   }
