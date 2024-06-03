@@ -10,7 +10,7 @@ class Routes {
   static const String home = '/';
   static const String experience = '/experience';
   static const String blog = '/blog';
-  static const String about = '/about';
+  static const String about = '/about-me';
   static const String contactMe = '/contact-me';
 
   static GoRouter router = GoRouter(

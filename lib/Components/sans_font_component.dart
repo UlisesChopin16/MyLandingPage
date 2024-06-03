@@ -13,12 +13,19 @@ class SansBold extends StatelessWidget {
 
   final TextAlign textAlign;
 
+  /// The maximum number of lines to be displayed
+  final int? maxLines;
+
+  final TextOverflow? overflow;
+
   const SansBold({
     super.key,
     required this.text,
     this.size = 16,
     this.color = Colors.black,
     this.textAlign = TextAlign.left,
+    this.maxLines,
+    this.overflow,
   });
 
   @override
@@ -26,6 +33,8 @@ class SansBold extends StatelessWidget {
     return Text(
       text,
       textAlign: textAlign,
+      maxLines: maxLines,
+      overflow: overflow,
       style: GoogleFonts.openSans(
         color: color,
         fontSize: size,
@@ -45,7 +54,14 @@ class Sans extends StatelessWidget {
   /// The text to be displayed
   final String text;
 
+  /// The alignment of the text, default is left
   final TextAlign textAlign;
+
+  /// The maximum number of lines to be displayed
+  final int? maxLines;
+
+  /// The overflow of the text when it exceeds the maxLines
+  final TextOverflow? overflow;
 
   const Sans({
     super.key,
@@ -53,6 +69,8 @@ class Sans extends StatelessWidget {
     this.size = 16,
     this.color = Colors.black,
     this.textAlign = TextAlign.left,
+    this.maxLines,
+    this.overflow,
   });
 
   @override
@@ -60,6 +78,8 @@ class Sans extends StatelessWidget {
     return Text(
       text,
       textAlign: textAlign,
+      maxLines: maxLines,
+      overflow: overflow,
       style: GoogleFonts.openSans(
         color: color,
         fontSize: size,

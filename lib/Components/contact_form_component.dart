@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 import 'package:landing_page/Components/sans_font_component.dart';
 import 'package:landing_page/Components/text_form_component.dart';
 import 'package:landing_page/Constants/constant_strings.dart';
@@ -49,7 +48,8 @@ class _ContactFormViewState extends State<ContactFormView> {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
-    double height = MediaQuery.of(context).size.height - AppBar().preferredSize.height;
+    double height =
+        MediaQuery.of(context).size.height - AppBar().preferredSize.height;
 
     return Container(
       color: Colors.white,
@@ -63,15 +63,15 @@ class _ContactFormViewState extends State<ContactFormView> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               if (widget.title)
-              const Center(
-                child: Padding(
-                  padding: EdgeInsets.only(bottom: 20.0),
-                  child: SansBold(
-                    text: ConstantStrings.contactMe,
-                    size: 40,
+                const Center(
+                  child: Padding(
+                    padding: EdgeInsets.only(bottom: 20.0),
+                    child: SansBold(
+                      text: ConstantStrings.contactMe,
+                      size: 40,
+                    ),
                   ),
                 ),
-              ),
               SizedBox(
                 width: width,
                 child: Wrap(
@@ -136,11 +136,7 @@ class _ContactFormViewState extends State<ContactFormView> {
               Padding(
                 padding: const EdgeInsets.only(bottom: 20.0),
                 child: MaterialButton(
-                  onPressed: () {
-                    context.go(
-                      '/home',
-                    );
-                  },
+                  onPressed: () {},
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),

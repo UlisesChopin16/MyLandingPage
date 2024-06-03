@@ -16,7 +16,8 @@ class _BlogViewState extends State<BlogView> {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
-    double height = MediaQuery.of(context).size.height - AppBar().preferredSize.height;
+    double height =
+        MediaQuery.of(context).size.height - AppBar().preferredSize.height;
     return Scaffold(
       drawer: const DrawerForMobileComponent(),
       body: CustomScrollView(
@@ -45,6 +46,11 @@ class _BlogViewState extends State<BlogView> {
           const BlogPostComponent(),
           const BlogPostComponent(),
           const BlogPostComponent(),
+          const SliverToBoxAdapter(
+            child: SizedBox(
+              height: 50,
+            ),
+          )
         ],
       ),
     );
