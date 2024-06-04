@@ -26,7 +26,7 @@ class _WorksViewState extends State<WorksView> {
 
     return Scaffold(
       backgroundColor: Colors.white,
-      drawer: width > 800 ? const DrawerForWebComponent() : const DrawerForMobileComponent(),
+      drawer: const DrawerForMobileComponent(),
       body: Scrollbar(
         controller: _scrollController,
         child: NestedScrollView(
@@ -35,7 +35,6 @@ class _WorksViewState extends State<WorksView> {
             return [
               SliverAppBar(
                 toolbarHeight: 55,
-                title: width > 800 ? const ListOfTabBarsComponent() : null,
                 backgroundColor: Colors.white,
                 expandedHeight: height > 800 ? 600 : 400,
                 flexibleSpace: FlexibleSpaceBar(
@@ -45,10 +44,14 @@ class _WorksViewState extends State<WorksView> {
                   ),
                   centerTitle: true,
                   title: width < 800
-                      ? const SansBold(
-                          text: ConstantStrings.works,
-                          size: 38,
-                        )
+                      ? Container(
+                        color: Colors.white,
+                        padding: const EdgeInsets.symmetric(horizontal: 10),
+                        child: const SansBold(
+                            text: ConstantStrings.works,
+                            size: 38,
+                          ),
+                      )
                       : null,
                 ),
               ),
@@ -57,7 +60,7 @@ class _WorksViewState extends State<WorksView> {
           body: ListView(
             children: [
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 30),
+                padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 50),
                 child: width < 800 ? const WorksMobileComponent() : const WorksWebComponent(),
               ),
             ],

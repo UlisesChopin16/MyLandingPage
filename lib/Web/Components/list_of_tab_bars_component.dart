@@ -4,17 +4,26 @@ import 'package:landing_page/Web/Components/tabbar_text_component.dart';
 import 'package:landing_page/tabbar_functions.dart';
 
 class ListOfTabBarsComponent extends StatelessWidget {
+
+  /// Put in true if you want the tabbarTexts to be on the right side
+  /// Put in false if you want the tabbarTexts to be on the left side
+  /// Default is false
+  final bool leftOrRight;
+
   final Color textColor;
   const ListOfTabBarsComponent({
     super.key,
     this.textColor = Colors.black,
+    this.leftOrRight = false,
   });
 
   @override
   Widget build(BuildContext context) {
     return Row(
       children: <Widget>[
-        const Spacer(),
+        Spacer(
+          flex: leftOrRight ? 8 : 1,
+        ),
         TabbarTextComponent(
           text: ConstantStrings.home,
           onTap: TabbarFunctions.homeTab,
@@ -44,8 +53,8 @@ class ListOfTabBarsComponent extends StatelessWidget {
           onTap: TabbarFunctions.contactTab,
           textColor: textColor,
         ),
-        const Spacer(
-          flex: 8,
+        Spacer(
+          flex: leftOrRight ? 1 : 8,
         ),
       ],
     );
