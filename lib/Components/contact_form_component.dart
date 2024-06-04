@@ -90,7 +90,7 @@ class _ContactFormComponentState extends State<ContactFormComponent> {
         'phoneNumber': phoneNumber,
         'message': message,
       });
-      print('Message added');
+      
     } catch (e) {
       print(e);
     }
