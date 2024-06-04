@@ -5,11 +5,13 @@ class TabbarTextComponent extends StatefulWidget {
   final String text;
   final double? fontSize;
   final void Function(BuildContext)? onTap;
+  final Color textColor;
   const TabbarTextComponent({
     super.key,
     required this.text,
     this.fontSize,
     this.onTap,
+    this.textColor = Colors.black,
   });
 
   @override
@@ -57,7 +59,7 @@ class _TabbarTextComponentState extends State<TabbarTextComponent> {
                   decorationColor: Colors.deepPurple,
                 )
               : GoogleFonts.roboto(
-                  color: Colors.black,
+                  color: widget.textColor,
                   fontWeight: FontWeight.w600,
                   fontSize: widget.fontSize == null ? 20 : (widget.fontSize! - 4),
                 ),

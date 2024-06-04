@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:landing_page/Components/sans_font_component.dart';
 
@@ -11,8 +12,13 @@ class TextFormComponent extends StatelessWidget {
   final String hintText;
 
   final String? Function(String?)? validator;
+  final void Function(String)? onChanged;
 
   final TextEditingController? controller;
+
+  final TextInputType? keyboardType;
+
+  final List<TextInputFormatter>? inputFormatters;
 
   const TextFormComponent({
     super.key,
@@ -22,6 +28,9 @@ class TextFormComponent extends StatelessWidget {
     this.width = 300,
     this.maxLines = 1,
     this.controller,
+    this.onChanged,
+    this.keyboardType,
+    this.inputFormatters,
   });
 
   @override
@@ -41,7 +50,10 @@ class TextFormComponent extends StatelessWidget {
             controller: controller,
             maxLines: maxLines,
             autovalidateMode: AutovalidateMode.onUserInteraction,
+            keyboardType: keyboardType,
+            inputFormatters: inputFormatters,
             validator: validator,
+            onChanged: onChanged,
             decoration: InputDecoration(
               hintText: hintText,
               hintStyle: GoogleFonts.poppins(fontSize: 14),

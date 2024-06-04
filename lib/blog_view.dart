@@ -5,8 +5,6 @@ import 'package:landing_page/Components/image_asset_component.dart';
 import 'package:landing_page/Components/sans_font_component.dart';
 import 'package:landing_page/Constants/constant_strings.dart';
 import 'package:landing_page/Mobile/Components/drawer_for_mobile_component.dart';
-import 'package:landing_page/Web/Components/drawer_for_web_component.dart';
-import 'package:landing_page/Web/Components/list_of_tab_bars_component.dart';
 
 class BlogView extends StatefulWidget {
   const BlogView({super.key});
@@ -16,7 +14,6 @@ class BlogView extends StatefulWidget {
 }
 
 class _BlogViewState extends State<BlogView> {
-
   final ScrollController _scrollController = ScrollController();
 
   void article() async {
@@ -39,7 +36,8 @@ class _BlogViewState extends State<BlogView> {
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height - AppBar().preferredSize.height;
     return Scaffold(
-      drawer: width > 800 ? const DrawerForWebComponent() : const DrawerForMobileComponent(),
+      backgroundColor: Colors.white,
+      drawer: const DrawerForMobileComponent(),
       body: Scrollbar(
         controller: _scrollController,
         child: NestedScrollView(
@@ -49,7 +47,6 @@ class _BlogViewState extends State<BlogView> {
               SliverAppBar(
                 toolbarHeight: 55,
                 backgroundColor: Colors.white,
-                title: width > 800 ? const ListOfTabBarsComponent() : null,
                 expandedHeight: height > 800 ? 600 : 400,
                 flexibleSpace: FlexibleSpaceBar(
                   background: const ImageAssetComponent(
