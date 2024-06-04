@@ -4,8 +4,6 @@ import 'package:landing_page/Components/sans_font_component.dart';
 import 'package:landing_page/Constants/constant_strings.dart';
 import 'package:landing_page/Mobile/Components/drawer_for_mobile_component.dart';
 import 'package:landing_page/Mobile/Components/works_mobile_component.dart';
-import 'package:landing_page/Web/Components/drawer_for_web_component.dart';
-import 'package:landing_page/Web/Components/list_of_tab_bars_component.dart';
 import 'package:landing_page/Web/Components/works_web_component.dart';
 
 class WorksView extends StatefulWidget {
@@ -16,7 +14,6 @@ class WorksView extends StatefulWidget {
 }
 
 class _WorksViewState extends State<WorksView> {
-
   final ScrollController _scrollController = ScrollController();
 
   @override
@@ -45,13 +42,13 @@ class _WorksViewState extends State<WorksView> {
                   centerTitle: true,
                   title: width < 800
                       ? Container(
-                        color: Colors.white,
-                        padding: const EdgeInsets.symmetric(horizontal: 10),
-                        child: const SansBold(
+                          color: Colors.white,
+                          padding: const EdgeInsets.symmetric(horizontal: 10),
+                          child: const SansBold(
                             text: ConstantStrings.works,
                             size: 38,
                           ),
-                      )
+                        )
                       : null,
                 ),
               ),
