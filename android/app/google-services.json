@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "294661128960",
+    "project_id": "mylandingpage-f232c",
+    "storage_bucket": "mylandingpage-f232c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:294661128960:android:46393be3e717ce833ca9e5",
+        "android_client_info": {
+          "package_name": "com.landingpage.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDHnrAWnnFlBRLA6i8jnaBnT4Q7HitWrQY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

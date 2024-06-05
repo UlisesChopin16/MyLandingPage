@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:landing_page/Components/sans_component.dart';
+import 'package:landing_page/Components/sans_font_component.dart';
 
 class BorderTextContainerComponent extends StatelessWidget {
-
   final String text;
 
   const BorderTextContainerComponent({
@@ -21,7 +20,7 @@ class BorderTextContainerComponent extends StatelessWidget {
         borderRadius: const BorderRadius.all(Radius.circular(10)),
       ),
       padding: const EdgeInsets.all(7),
-      child:  SansComponent(text: text),
+      child: Sans(text: text),
     );
   }
 }

@@ -18,6 +18,10 @@ class ElevationCardComponent extends StatelessWidget {
         elevation: 20,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(15),
+          side: const BorderSide(
+            color: Colors.deepPurple,
+            width: 2,
+          )
         ),
         shadowColor: Colors.deepPurple,
         child: Padding(

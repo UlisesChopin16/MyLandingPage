@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:landing_page/Components/sans_bold_component.dart';
+import 'package:landing_page/Components/sans_font_component.dart';
 
 class MessageTextContainerComponent extends StatelessWidget {
-
   final Color backgroundColor;
   final Color textColor;
 
@@ -24,12 +23,18 @@ class MessageTextContainerComponent extends StatelessWidget {
           topLeft: Radius.circular(20),
           topRight: Radius.circular(20),
           bottomRight: Radius.circular(20),
-        )
+        ),
       ),
       child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-        child: SansBoldComponent(text: text,  color: textColor),
-      )
+        padding: const EdgeInsets.symmetric(
+          vertical: 10,
+          horizontal: 20,
+        ),
+        child: SansBold(
+          text: text,
+          color: textColor,
+        ),
+      ),
     );
   }
 }

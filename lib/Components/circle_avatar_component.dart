@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 
 class CircleAvatarComponent extends StatefulWidget {
   
-  const CircleAvatarComponent({super.key});
+  final double radius;
+
+  const CircleAvatarComponent({super.key, required this.radius});
 
   @override
   State<CircleAvatarComponent> createState() => _CircleAvatarComponentState();
@@ -22,20 +24,20 @@ class _CircleAvatarComponentState extends State<CircleAvatarComponent> {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return  Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
         CircleAvatar(
-          radius: 147,
+          radius: widget.radius,
           // backgroundColor: colors[index],
           backgroundColor: Colors.deepPurple,
           child: CircleAvatar(
-            radius: 143,
+            radius: widget.radius - 4,
             backgroundColor: Colors.black,
             child: CircleAvatar(
-              radius: 140,
+              radius: widget.radius - 7,
               backgroundColor: Colors.white,
-              backgroundImage: AssetImage('assets/images/landingdash.png'),                  
+              backgroundImage: const AssetImage('assets/images/landingdash.png'),                  
             ),
           ),
         ),
